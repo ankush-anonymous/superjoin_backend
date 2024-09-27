@@ -50,7 +50,7 @@ const syncSheet = async (req, res) => {
 
     // Perform the update operation for each modified row
     for (let updatedRow of rowsToUpdate) {
-      await updateData(updatedRow); // You'll need to implement updateData in dataController
+      await updateData(updatedRow.item_id, updatedRow); // Pass the item_id as id and the entire row as data
     }
 
     // Perform the delete operation for each missing row
