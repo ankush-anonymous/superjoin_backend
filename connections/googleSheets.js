@@ -18,7 +18,7 @@ const connectSheets = async () => {
   try {
     // Initialize the Google Spreadsheet document
     const doc = new GoogleSpreadsheet(
-      "1Jo4vcP-wAhBOP2-D3TveOFZ8AebrSpaYMO5SPxLZljY",
+      "1af7tM7PIaR-rKcjtwJsTIiEAxmhKCD-X74xNmIvQONg",
       jwt
     );
 
