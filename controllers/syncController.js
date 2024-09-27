@@ -5,6 +5,7 @@ const { addData, fetchData } = require("./dataController");
 // Function to handle sheet sync for adding new rows
 const syncSheet = async (req, res) => {
   const sheetData = req.body; // The entire sheet data sent from Google Sheets
+  console.log(sheetData);
   try {
     const dbData = await fetchData(); // Fetch all current data from the database
 
