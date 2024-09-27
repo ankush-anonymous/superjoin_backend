@@ -3,12 +3,14 @@ const { connectToDB } = require("./connections/db");
 const { connectSheets } = require("./connections/googleSheets");
 const dataRoutes = require("./routes/dataRoute");
 require("dotenv").config();
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Server is running and connected to Google Sheets and PostgreSQL");

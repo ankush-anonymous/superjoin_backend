@@ -38,6 +38,7 @@ const updateData = async (id, data) => {
     throw new Error("Error updating data");
   }
 };
+
 // Function to update data (for API route)
 const updateDataRoute = async (req, res) => {
   const { id } = req.params;
