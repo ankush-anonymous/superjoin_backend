@@ -11,11 +11,9 @@ const syncSheet = async (req, res) => {
 
     const newRows = [];
 
-    // Iterate over the sheet data to determine new rows
     sheetData.forEach((row) => {
       const dbRow = dbData.find((r) => r.item_id === row.item_id);
 
-      // If the row does not exist in the database, it's a new row
       if (!dbRow) {
         newRows.push(row);
       }
