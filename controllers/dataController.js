@@ -3,9 +3,9 @@ const dataRepository = require("../repositories/dataRepository");
 
 // Function to add data (for internal use)
 const addData = async (data) => {
-  const { item_name, stock, price, supplier } = data;
+  const { item_name, stock, price } = data;
   try {
-    await dataRepository.addRow([item_name, stock, price, supplier]);
+    await dataRepository.addRow([item_name, stock, price]);
   } catch (error) {
     console.error("Error inserting data:", error);
     throw new Error("Error inserting data");
@@ -24,9 +24,9 @@ const addDataRoute = async (req, res) => {
 
 // Function to update data (for internal use)
 const updateData = async (id, data) => {
-  const { item_name, stock, price, supplier } = data;
+  const { item_name, stock, price } = data;
   try {
-    await dataRepository.updateRow(id, [item_name, stock, price, supplier]);
+    await dataRepository.updateRow(id, [item_name, stock, price]);
   } catch (error) {
     console.error("Error updating data:", error);
     throw new Error("Error updating data");
