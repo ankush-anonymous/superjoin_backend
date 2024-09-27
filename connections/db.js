@@ -3,7 +3,7 @@ const { Pool } = require("pg");
 
 // Database connection URL
 const dbUrl =
-  "postgresql://superjoin_database_1kd6_user:vH8L1O01sI7e8InCkBw7q2e9UiBN3ool@dpg-crr5qrd6l47c73cdi6ng-a.singapore-postgres.render.com:5432/superjoin_database_1kd6";
+  "postgresql://superjoin_database_5zuw_user:Nf5v3rgqpquWwW6uWVpOxUxjOzlh5ntD@dpg-crrb9fij1k6c73ecvh4g-a.singapore-postgres.render.com:5432/superjoin_database_5zuw";
 
 // Create a new pool using the connection URL
 const pool = new Pool({
