@@ -1,6 +1,7 @@
 const express = require("express");
 const { connectToDB } = require("./connections/db");
 const { connectSheets } = require("./connections/googleSheets");
+const { consumeMessages } = require("../backend-sql/util/rabbitmqConsumer");
 const dataRoutes = require("./routes/dataRoute");
 require("dotenv").config();
 const cors = require("cors");
@@ -24,6 +25,7 @@ const start = async () => {
     if (db) {
       console.log("Database is connected");
       await connectSheets();
+      consumeMessages();
       app.listen(port, () => {
         console.log(`Server is listening on port ${port}`);
       });
