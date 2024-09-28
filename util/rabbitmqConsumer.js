@@ -3,7 +3,7 @@ const { syncSheet } = require("../controllers/syncController"); // Import the sy
 
 // RabbitMQ connection details
 const RABBITMQ_URL =
-  "amqps://lqxaoajr:xGf1f8TnBVuoauFSMHomS5Kfe3cM55es@puffin.rmq2.cloudamqp.com/lqxaoajr";
+  "amqps://swyvhyqm:qZLvJn3NjeT-g-uPeKiNoOLaoOkjjf4m@puffin.rmq2.cloudamqp.com/swyvhyqm";
 const QUEUE = "sheet_sync";
 
 // Function to consume messages from the RabbitMQ queue
