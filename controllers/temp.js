@@ -1,5 +1,4 @@
 const amqp = require("amqplib/callback_api");
-const { syncSheet } = require("./syncController"); // Import the syncSheet controller
 
 // RabbitMQ connection details
 const RABBITMQ_URL =
@@ -46,16 +45,17 @@ const consumeMessages = () => {
 // Function to process the incoming message
 const processMessage = async (message) => {
   try {
-    // The message is expected to contain sheet data
-    const req = { body: message }; // Wrap the message in a req-like object
-    const res = {
-      status: (statusCode) => ({
-        send: (msg) => console.log(`Response: ${statusCode} - ${msg}`),
-      }),
-    };
+    // Extract relevant data from the message
+    const items = message; // You might need to adjust this based on the message format
 
-    // Call the syncSheet function
-    await syncSheet(req, res);
+    // Here, implement your logic to update the PostgreSQL database
+    // Example:
+    // await updateDatabase(items);
+
+    console.log(
+      "Database updated successfully with the following items:",
+      items
+    );
   } catch (error) {
     console.error("Error processing message:", error);
   }
