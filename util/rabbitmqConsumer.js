@@ -1,5 +1,5 @@
 const amqp = require("amqplib/callback_api");
-const { syncSheet } = require("./syncController"); // Import the syncSheet controller
+const { syncSheet } = require("../controllers/syncController"); // Import the syncSheet controller
 
 // RabbitMQ connection details
 const RABBITMQ_URL =
