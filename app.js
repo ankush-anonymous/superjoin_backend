@@ -1,7 +1,7 @@
 const express = require("express");
 const { connectToDB } = require("./connections/db");
 const { connectSheets } = require("./connections/googleSheets");
-const { consumeMessages } = require("../backend-sql/util/rabbitmqConsumer");
+const { consumeMessages } = require("./util/rabbitmqConsumer");
 const dataRoutes = require("./routes/dataRoute");
 require("dotenv").config();
 const cors = require("cors");
